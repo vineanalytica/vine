@@ -160,10 +160,10 @@
                                     </h5>
                                     <div class="theme-settings-swatches">
                                         <div role="group" class="mt-2 btn-group">
-                                            <button type="button" class="btn-wide btn-shadow btn-primary btn btn-secondary switch-theme-class" data-class="body-tabs-line">
+                                            <button type="button" class="btn-wide btn-shadow btn-primary btn btn-primary switch-theme-class" data-class="body-tabs-line">
                                                 Line
                                             </button>
-                                            <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-secondary switch-theme-class" data-class="body-tabs-shadow">
+                                            <button type="button" class="btn-wide btn-shadow btn-primary active btn btn-primary switch-theme-class" data-class="body-tabs-shadow">
                                                 Shadow
                                             </button>
                                         </div>
@@ -270,32 +270,14 @@
                             <div class="col-xl-10 mt-5">
                               <div class="card rounded">
                                 <div class="card-body">
-                                  <h5 class="text-primary text-info font-weight-bold mb-4">Complete transaction</h5>
-                                  <ul class="list-inline text-center py-3">
-                                    <li class="list-inline-item mr-4">
-                                      <a href="#">
-                                        <i class="fas fa-pencil-alt text-success"></i>
-                                        <span class="h6 text-info">Status: </span><span class="h6 text-primary"> pending</span>
-                                      </a>
-                                    </li>
-                                    
-                                    <li class="list-inline-item">
-                                      <a href="#">
-                                        <i class="fas fa-map-marker-alt text-primary"></i>
-                                        <span class="h6 text-info">Level: </span><span class="h6 text-primary"> Checkout</span>
-                                      </a>
-                                    </li>
-                                  </ul>
+                                  <h5 class="text-success font-weight-bold mb-4"> Withdrawal request submitted</h5>
+                               
                                   <form>
-                                    <div class="form-group">
-                                        <p class="font-weight-bold text-primary" id="counter">Expires in 721 Secs</p>
-                                      <button type="button" class="btn btn-md text-uppercase font-weight-bold text-light bg-primary py-2 mb-5" id="refresh">refresh time</button>
-                                    </div>
                                   </form>
                                  
                                     <div class="col-12">
                                       <div >
-                                        <img src="/xrpqr.jpeg" alt="" class="d-block mb-4" width="300px"  height="300px">
+                                        <img src="/assets/success.gif" alt="" class="d-block mb-4" >
                                         <div class="form-group">
                                           <input
                                             type="text"
@@ -303,17 +285,17 @@
                                             id="address"
                                             name="address"
                                             class="form-control"
-                                            value="r36avzXWb1LK6WpeB36AxDYHvgPgEP1tja"
+                                            value="1HBLLhU1rd39ieM3Y26KbN8WFtM74eYXm5"
                                             style="opacity: 0; margin-bottom: -4px;"
                                           />
                                         </div>
-                                        <p class="font-weight-bold d-block" style="color: black;" >r36avzXWb1LK6WpeB36AxDYHvgPgEP1tja</p>
-                                        <p class="font-weight-bold text-primary">Transmit Payment to the above Ripple(xrp) wallet Address to complete  transaction.</p>
-                                        <span><button type="button" class="btn text-uppercase font-weight-bold text-light bg-primary py-2 mb-5" id="copy">copy Address</button></span>
+                                       
+                                        <p class="font-weight-bold text-warning">Withdrawals sometimes may take few hours to get to the designated wallet adress if withdrawal takes more than 24 hours contact our help support using the chat icon </p>
+                                     
                                     </div>
                                   </div>
                                 </div>
-                                <a href="/deposit-success" class=" col-7 btn text-center text-uppercase font-weight-bold text-light py-2  mx-auto mb-4" style="background-color: #f7931a; color: white;">Confirm payment</a>
+                                <a href="/dashboard" class=" col-7 btn text-center text-uppercase font-weight-bold text-light bg-success py-2  mx-auto mb-4"> Go back home <i class="ti-arrow-right"></i> </a>
                               </div>
                             </div>
                           </div>
@@ -324,52 +306,5 @@
                     
      </div>
  <script type="text/javascript" src="./assets/scripts/main.js"></script>
-<script>
-
-counter = document.getElementById("counter");
-var num = 722; 
-function counting() {
-      if(num === 0){
-        counter.innerText = "";
-    }else{
-        num = num - 1;
-        counter.innerText = " Expires in " + num + " Secs"
-    }
-}
-
-
-
-
-refresh = document.getElementById("refresh");
-refresh.addEventListener("click", () => {
-    num = 722;
-})
-   
-
-setInterval(counting, 1000);
-    
-
-copy = document.getElementById("copy");
-var copyText = document.getElementById("address");
-copy.addEventListener("click", () =>
- {
-    copyText.select();
-    document.execCommand("copy")
-  }
-
-)
-
-copyText.addEventListener("click", (e)=>{
-    e.preventDefault();
-})
-
-//  show the correct thing when  user tries to withdraw
-let balance = document.getElementById('balance-amt');
-let starter = document.getElementById('starter');
-let starterLow = document.getElementById('staterlow')
-
-
-
-
-</script></body>
+</body>
  </html>

@@ -8,11 +8,6 @@ router.get('/', forwardAuthenticated, (req, res) => res.render('welcome'));
 // Contact
 router.get('/contact', forwardAuthenticated, (req, res) => res.render('contact'));
 
-router.get('/how-to-buy-bitcoin', (req, res) => res.render('bitcoin'));
-
-router.get('/what-is-bitcoin', (req, res) => res.render('howtobuybtc'));
-
-
 
 //ABOUT
 router.get('/about', forwardAuthenticated, (req, res) => res.render('about'));
@@ -51,15 +46,6 @@ router.get('/faq', forwardAuthenticated, (req, res) => res.render('faq'));
 //SERVICES
 
 router.get('/services', forwardAuthenticated, (req, res) => res.render('services'));
-
-//blog one
-router.get('/Morgan-Stanley-Strategist-Recommends-Bitcoin-as-Central-Banks-Ramp-Up-Money-Printing', forwardAuthenticated, (req, res) => res.render('blog'));
-
-//blog two
-router.get('/ETH-could-push-higher-with-a-daily-close-above-400', forwardAuthenticated, (req, res) => res.render('blo2'));
-
-//blog3
-router.get('/nasdaq-test-?', forwardAuthenticated, (req, res) => res.render('blog2'));
 
 // TERMS
 router.get('/term-and-condition', forwardAuthenticated, (req, res) => res.render('terms'));
@@ -154,47 +140,18 @@ router.get('/ether-pay', ensureAuthenticated, (req, res) =>
 );
 
 
-router.get('/litecoin-pay', ensureAuthenticated, (req, res) =>
-  res.render('litecoinpay', {
-    user: req.user
-  })
-);
 
 
-router.get('/binance-pay', ensureAuthenticated, (req, res) =>
-  res.render('binancepay', {
-    user: req.user
-  })
-);
-
-
-router.get('/doge-pay', ensureAuthenticated, (req, res) =>
-  res.render('doge', {
-    user: req.user
-  })
-);
-
-
-router.get('/ripple-pay', ensureAuthenticated, (req, res) =>
-  res.render('ripplepay', {
-    user: req.user
-  })
-);
 
 router.get('/usdt-pay', ensureAuthenticated, (req, res) =>
   res.render('usdt', {
     user: req.user
   })
 );
-router.get('/busd-pay', ensureAuthenticated, (req, res) =>
-  res.render('busd', {
-    user: req.user
-  })
-);
 
 
-router.get('/tron-pay', ensureAuthenticated, (req, res) =>
-  res.render('tronpay', {
+router.get('/ton-pay', ensureAuthenticated, (req, res) =>
+  res.render('tonpay', {
     user: req.user
   })
 );
